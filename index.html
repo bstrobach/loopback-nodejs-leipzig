@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>LoopBack @ Node.js Leipzig Meetup</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="shower/themes/ribbon/styles/styles.css"
+    />
+    <style>
+      .shower {
+        --slide-ratio: calc(16 / 9);
+      }
+
+      #cover h2 {
+        margin: 130px 0 0;
+        text-align: center;
+        font-size: 70px;
+      }
+
+      #cover p {
+        margin: 10px 0 0;
+        text-align: center;
+        font-style: italic;
+        font-size: 30px;
+      }
+      #cover p.note {
+        margin-top: 4em;
+        font-size: 20px;
+      }
+
+      .footer {
+        color: black;
+      }
+
+      #cover::after,
+      .promo::after {
+        visibility: hidden;
+      }
+
+      #about-me img {
+        border: 2px solid #222;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      }
+
+      #about-me .columns.two {
+        grid-template-columns: 200px 1fr;
+      }
+
+      #facts .ibm-company span {
+        position: absolute;
+        top: -8.385em;
+        left: 5.2em;
+        right: 0em;
+        height: 0.12em;
+        content: "";
+      }
+
+      #facts ul > li::before,
+      #links ul > li::before,
+      #cli ul > li::before,
+      #key-concepts ul > li::before,
+      #why ul > li::before {
+        content: "";
+      }
+
+      #key-concepts .columns {
+        grid-column-gap: 60px;
+      }
+
+      #facts .ibm-company,
+      #key-concepts .underline {
+        position: relative;
+        text-decoration: none;
+      }
+      #key-concepts .underline span {
+        position: absolute;
+        top: 1em;
+        left: 0em;
+        right: 0em;
+        height: 0.12em;
+        background: #cc0000;
+        content: "";
+      }
+      h3.crafting {
+        margin-bottom: 0.1em;
+      }
+
+      #getting-started .thatsall {
+        position: absolute;
+        top: 2em;
+        left: 7em;
+        right: 0em;
+        height: 0.12em;
+        color: #cc0000;
+        content: "";
+        transform: rotate(-16deg);
+        font-size: 3em;
+      }
+
+      #demo h2,
+      #qa h2,
+      #ty h2 {
+        font-size: 80px;
+      }
+    </style>
+  </head>
+  <body class="shower list">
+    <header class="caption">
+      <h1>LoopBack @ Node.js Leipzig Meetup</h1>
+      <p>Björn Strobach - @bstrobach</p>
+    </header>
+
+    <section class="slide" id="cover">
+      <h2>LoopBack 4: Build amazing APIs</h2>
+      <p>A platform for building APIs and microservices in Node.js</p>
+      <p class="note">Björn Strobach - Node.js Meetup Leipzig - July 2019</p>
+    </section>
+
+    <section class="slide promo">
+      <figure>
+        <img class="cover" src="pictures/ijs-slide-1.png" alt="ijs-slide-1" />
+      </figure>
+    </section>
+
+    <section class="slide promo">
+      <figure>
+        <img class="cover" src="pictures/ijs-slide-2.png" alt="ijs-slide-2" />
+      </figure>
+    </section>
+
+    <section class="slide" id="about-me">
+      <h2>Who is this guy?</h2>
+      <div class="columns two">
+        <div>
+          <img
+            height="200"
+            src="pictures/bjoern-strobach.png"
+            alt="Björn Strobach"
+          />
+        </div>
+        <div>
+          Software Developer <a href="http://mrappware.de">@MrAppWare</a>,
+          Magdeburg GitHub: <a href="https://github.com/bstrobach">@bstrobach</a
+          ><br />
+          Twitter: <a href="https://twitter.com/bstrobach">@bstrobach</a><br />
+          Xing: <a href="http://xing.to/bmstr">http://xing.to/bstrobach</a>
+        </div>
+      </div>
+      <div>
+        Slides &amp; Code:
+        <a href="https://github.com/bstrobach/loopback-nodejs-leipzig"
+          >https://github.com/bstrobach/<strong
+            >loopback-nodejs-leipzig</strong
+          ></a
+        >
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>What are we talking about?</h2>
+      <h3 class="next">LoopBack <span class="next">- What?</span></h3>
+      <figure class="next">
+        <blockquote>
+          <p>
+            LoopBack is a highly extensible, open-source Node.js framework based
+            on Express that enables you to quickly create APIs and microservices
+            composed from backend systems such as databases and SOAP or REST
+            services.
+          </p>
+        </blockquote>
+        <figcaption>LoopBack Docs</figcaption>
+      </figure>
+    </section>
+
+    <section class="slide" id="facts">
+      <h2>Cool, who did it?</h2>
+      <ul>
+        <li class="next">StrongLoop</li>
+        <li class="next">Based in California</li>
+        <li class="next">Highly active in Node.js Foundation</li>
+        <li class="next">Published LoopBack in September 2013</li>
+        <li class="next">
+          <del class="ibm-company"
+            >Acquired by IBM in September 2015
+            <span class="next"> - An IBM Company</span></del
+          >
+        </li>
+        <li class="next">Since then: LoopBack 3 and 4 released</li>
+      </ul>
+    </section>
+
+    <section class="slide" id="why">
+      <h2>And why should I use it?</h2>
+      <ul>
+        <div class="next">One source of truth</div>
+        <div class="next">API composition layer</div>
+        <div class="next">OpenAPI standards</div>
+        <div class="next">Extensibility</div>
+        <div class="next">Modern technologies</div>
+      </ul>
+    </section>
+
+    <section class="slide" id="key-concepts">
+      <h2>Nice, tell me more about concepts</h2>
+      <div class="columns three next">
+        <ul>
+          <li>Application</li>
+          <li>Server</li>
+          <li>Context</li>
+          <li>Binding</li>
+          <li>Dependency Injection</li>
+        </ul>
+        <ul>
+          <li>
+            <del class="underline">Controller<span class="next"></span></del>
+          </li>
+          <li>Interceptors</li>
+          <li>Route</li>
+          <li>Sequence</li>
+          <li>
+            <del class="underline">Model<span class="next"></span></del>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <del class="underline">Data Sources<span class="next"></span></del>
+          </li>
+          <li>
+            <del class="underline">Repository<span class="next"></span></del>
+          </li>
+          <li>Relation</li>
+          <li>Decorator</li>
+          <li>Component</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>Controllers?</h2>
+      <p class="next">
+        A class that implements operations defined by an application’s API
+      </p>
+      <p class="next">Implements an applications business logic</p>
+      <p class="next">
+        Acts as bridge between the HTTP/REST API and domain/database models
+      </p>
+    </section>
+
+    <section class="slide">
+      <h2>Model?</h2>
+      <p class="next">Describes business domain objects</p>
+      <p class="next">
+        Usually defines a list of properties with name, type, and other
+        constraints
+      </p>
+      <p class="next">
+        Can be used for data exchange on the wire or between different systems
+      </p>
+    </section>
+
+    <section class="slide">
+      <h2>Data Sources?</h2>
+      <p class="next">
+        A config for a Connector instance that represents data in an external
+        system
+      </p>
+      <p class="next">LoopBack supports many different external system, e.g.</p>
+      <p class="next">
+        In-memory DB, Microsoft SQL, Oracle, Redis, MongoDB, PostgreSQL, ...
+      </p>
+    </section>
+
+    <section class="slide">
+      <h2>Repositories?</h2>
+      <p class="next">
+        Represents a specialized service interface that provides strong-typed
+        data access (for example, CRUD) operations of a domain model against the
+        underlying database or service.
+      </p>
+    </section>
+
+    <section class="slide">
+      <h2>Easy, how can I use it?</h2>
+      <div class="next">
+        <h3 class="crafting">Bottom-up</h3>
+        <em>Programmatic, code-first approach, export an OAS</em>
+      </div>
+      <div class="next">
+        <h3 class="crafting">Top-Down</h3>
+        <em>Use the CLI, scaffold application and generate artifacts</em>
+      </div>
+    </section>
+
+    <section class="slide" id="cli">
+      <h2>CLI? Like the Angular CLI?</h2>
+      <ul>
+        <li class="next">Provides CLI tools to help get started quickly</li>
+        <li class="next">
+          Generates applications and installs their dependencies
+        </li>
+        <li class="next">
+          Provides optional installation of recommended dependencies
+        </li>
+        <li class="next">
+          Helps generating artifacts (Controller, DataSource, Model, Repository,
+          [...])
+        </li>
+      </ul>
+    </section>
+    <section class="slide" id="getting-started">
+      <h2>Wow, how can I start developing?</h2>
+      <ol>
+        <li class="next">
+          Install LoopBack 4 CLI
+          <pre>
+                    <code>$ npm i -g @loopback/cli</code>
+                </pre>
+        </li>
+
+        <li class="next">
+          Create a new LoopBack application
+          <pre>
+                    <code>$ lb4 app my-app [--yes]</code>
+                </pre>
+        </li>
+
+        <li class="next">
+          Starting the project
+          <pre>
+                    <code>$ cd my-app && npm start</code>
+                </pre>
+        </li>
+      </ol>
+      <span class="next thatsall">That's all.<br />(almost...)</span>
+    </section>
+
+    <section class="slide" id="demo">
+      <h2 class="shout">Demo</h2>
+    </section>
+
+    <section class="slide" id="qa">
+      <h2 class="shout">Q &amp; A</h2>
+    </section>
+
+    <section class="slide" id="ty">
+      <h2 class="shout">Thank you.</h2>
+    </section>
+
+    <section class="slide" id="links">
+      <h2>Useful links</h2>
+      <ul>
+        <li><a href="https://loopback.io">LoopBack.io</a></li>
+        <li>
+          <a href="https://loopback.io/doc/en/lb4/index.html">LoopBack4 docs</a>
+        </li>
+        <li>
+          <a href="https://github.com/strongloop/loopback-next"
+            >LoopBack on GitHub</a
+          >
+        </li>
+        <li>
+          <a href="https://loopback.io/doc/en/lb4/Concepts.html"
+            >Key concepts</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://loopback.io/doc/en/lb4/Defining-the-API-using-code-first-approach.html"
+            >Bottom up approach - Code first</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://loopback.io/doc/en/lb4/Defining-the-API-using-design-first-approach.html"
+            >Top-down approach - Design first</a
+          >
+        </li>
+        <li>
+          <a href="https://github.com/strongloop/loopback4-example-shopping"
+            >Comprehensive E-Commerce platform example</a
+          >
+        </li>
+      </ul>
+    </section>
+
+    <div class="progress"></div>
+
+    <script src="shower/shower.min.js"></script>
+  </body>
+</html>
