@@ -12,6 +12,98 @@
       .shower {
         --slide-ratio: calc(16 / 9);
       }
+
+      #cover h2 {
+        margin: 130px 0 0;
+        text-align: center;
+        font-size: 70px;
+      }
+
+      #cover p {
+        margin: 10px 0 0;
+        text-align: center;
+        font-style: italic;
+        font-size: 30px;
+      }
+      #cover p.note {
+        margin-top: 4em;
+        font-size: 20px;
+      }
+
+      .footer {
+        color: black;
+      }
+
+      #cover::after,
+      .promo::after {
+        visibility: hidden;
+      }
+
+      #about-me img {
+        border: 2px solid #222;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      }
+
+      #about-me .columns.two {
+        grid-template-columns: 200px 1fr;
+      }
+
+      #facts .ibm-company span {
+        position: absolute;
+        top: -8.385em;
+        left: 5.2em;
+        right: 0em;
+        height: 0.12em;
+        content: "";
+      }
+
+      #facts ul > li::before,
+      #links ul > li::before,
+      #cli ul > li::before,
+      #key-concepts ul > li::before,
+      #why ul > li::before {
+        content: "";
+      }
+
+      #key-concepts .columns {
+        grid-column-gap: 60px;
+      }
+
+      #facts .ibm-company,
+      #key-concepts .underline {
+        position: relative;
+        text-decoration: none;
+      }
+      #key-concepts .underline span {
+        position: absolute;
+        top: 1em;
+        left: 0em;
+        right: 0em;
+        height: 0.12em;
+        background: #cc0000;
+        content: "";
+      }
+      h3.crafting {
+        margin-bottom: 0.1em;
+      }
+
+      #getting-started .thatsall {
+        position: absolute;
+        top: 2em;
+        left: 7em;
+        right: 0em;
+        height: 0.12em;
+        color: #cc0000;
+        content: "";
+        transform: rotate(-16deg);
+        font-size: 3em;
+      }
+
+      #demo h2,
+      #qa h2,
+      #ty h2 {
+        font-size: 80px;
+      }
     </style>
   </head>
   <body class="shower list">
@@ -24,33 +116,19 @@
       <h2>LoopBack 4: Build amazing APIs</h2>
       <p>A platform for building APIs and microservices in Node.js</p>
       <p class="note">Björn Strobach - Node.js Meetup Leipzig - July 2019</p>
-      <style>
-        #cover h2 {
-          margin: 130px 0 0;
-          text-align: center;
-          font-size: 70px;
-        }
-
-        #cover p {
-          margin: 10px 0 0;
-          text-align: center;
-          font-style: italic;
-          font-size: 30px;
-        }
-        #cover p.note {
-          margin-top: 4em;
-          font-size: 20px;
-        }
-
-        .footer {
-          color: black;
-        }
-        #cover::after {
-          visibility: hidden;
-        }
-      </style>
     </section>
 
+    <section class="slide promo">
+      <figure>
+        <img class="cover" src="pictures/ijs-slide-1.png" alt="ijs-slide-1" />
+      </figure>
+    </section>
+
+    <section class="slide promo">
+      <figure>
+        <img class="cover" src="pictures/ijs-slide-2.png" alt="ijs-slide-2" />
+      </figure>
+    </section>
 
     <section class="slide" id="about-me">
       <h2>Who is this guy?</h2>
@@ -78,15 +156,6 @@
           ></a
         >
       </div>
-      <style>
-        #about-me img {
-          border: 2px solid #222;
-          box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-        }
-        #about-me .columns.two {
-          grid-template-columns: 200px 1fr;
-        }
-      </style>
     </section>
 
     <section class="slide">
@@ -120,23 +189,6 @@
         </li>
         <li class="next">Since then: LoopBack 3 and 4 released</li>
       </ul>
-      <style>
-        #facts ul > li::before {
-          content: "";
-        }
-        #facts .ibm-company {
-          position: relative;
-          text-decoration: none;
-        }
-        #facts .ibm-company span {
-          position: absolute;
-          top: -8.385em;
-          left: 5.2em;
-          right: 0em;
-          height: 0.12em;
-          content: "";
-        }
-      </style>
     </section>
 
     <section class="slide" id="why">
@@ -148,11 +200,6 @@
         <div class="next">Extensibility</div>
         <div class="next">Modern technologies</div>
       </ul>
-      <style>
-        #why ul > li::before {
-          content: "";
-        }
-      </style>
     </section>
 
     <section class="slide" id="key-concepts">
@@ -188,28 +235,6 @@
           <li>Component</li>
         </ul>
       </div>
-
-      <style>
-        #key-concepts .columns {
-          grid-column-gap: 60px;
-        }
-        #key-concepts ul > li::before {
-          content: "";
-        }
-        #key-concepts .underline {
-          position: relative;
-          text-decoration: none;
-        }
-        #key-concepts .underline span {
-          position: absolute;
-          top: 1em;
-          left: 0em;
-          right: 0em;
-          height: 0.12em;
-          background: #cc0000;
-          content: "";
-        }
-      </style>
     </section>
 
     <section class="slide">
@@ -266,12 +291,6 @@
         <h3 class="crafting">Top-Down</h3>
         <em>Use the CLI, scaffold application and generate artifacts</em>
       </div>
-
-      <style>
-        h3.crafting {
-          margin-bottom: 0.1em;
-        }
-      </style>
     </section>
 
     <section class="slide" id="cli">
@@ -289,11 +308,6 @@
           [...])
         </li>
       </ul>
-      <style>
-        #cli ul > li::before {
-          content: "";
-        }
-      </style>
     </section>
     <section class="slide" id="getting-started">
       <h2>Wow, how can I start developing?</h2>
@@ -320,65 +334,55 @@
         </li>
       </ol>
       <span class="next thatsall">That's all.<br />(almost...)</span>
-      <style>
-        #getting-started .thatsall {
-          position: absolute;
-          top: 2em;
-          left: 7em;
-          right: 0em;
-          height: 0.12em;
-          color: #cc0000;
-          content: "";
-          transform: rotate(-16deg);
-          font-size: 3em;
-        }
-      </style>
     </section>
 
     <section class="slide" id="demo">
       <h2 class="shout">Demo</h2>
-      <style>
-        #demo h2 {
-          font-size: 80px;
-        }
-      </style>
     </section>
 
     <section class="slide" id="qa">
       <h2 class="shout">Q &amp; A</h2>
-      <style>
-        #qa h2 {
-          font-size: 80px;
-        }
-      </style>
     </section>
 
     <section class="slide" id="ty">
       <h2 class="shout">Thank you.</h2>
-      <style>
-        #ty h2 {
-          font-size: 80px;
-        }
-      </style>
     </section>
 
     <section class="slide" id="links">
-        <h2>Useful links</h2>
-        <ul>
-            <li><a href="https://loopback.io">LoopBack.io</a></li>
-            <li><a href="https://loopback.io/doc/en/lb4/index.html">LoopBack4 docs</a></li>
-            <li><a href="https://github.com/strongloop/loopback-next">LoopBack on GitHub</a></li>
-            <li><a href="https://loopback.io/doc/en/lb4/Concepts.html">Key concepts</a></li>
-            <li><a href="https://loopback.io/doc/en/lb4/Defining-the-API-using-code-first-approach.html">Bottom up approach - Code first</a></li>
-            <li><a href="https://loopback.io/doc/en/lb4/Defining-the-API-using-design-first-approach.html">Top-down approach - Design first</a></li>
-            <li><a href="https://github.com/strongloop/loopback4-example-shopping">Comprehensive E-Commerce platform example</a></li>
-        </ul>
-
-        <style>
-        #links ul > li::before {
-          content: "";
-        }
-        </style>
+      <h2>Useful links</h2>
+      <ul>
+        <li><a href="https://loopback.io">LoopBack.io</a></li>
+        <li>
+          <a href="https://loopback.io/doc/en/lb4/index.html">LoopBack4 docs</a>
+        </li>
+        <li>
+          <a href="https://github.com/strongloop/loopback-next"
+            >LoopBack on GitHub</a
+          >
+        </li>
+        <li>
+          <a href="https://loopback.io/doc/en/lb4/Concepts.html"
+            >Key concepts</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://loopback.io/doc/en/lb4/Defining-the-API-using-code-first-approach.html"
+            >Bottom up approach - Code first</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://loopback.io/doc/en/lb4/Defining-the-API-using-design-first-approach.html"
+            >Top-down approach - Design first</a
+          >
+        </li>
+        <li>
+          <a href="https://github.com/strongloop/loopback4-example-shopping"
+            >Comprehensive E-Commerce platform example</a
+          >
+        </li>
+      </ul>
     </section>
 
     <div class="progress"></div>
