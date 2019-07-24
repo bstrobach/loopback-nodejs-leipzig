@@ -43,7 +43,8 @@
     "@loopback/rest": "^1.16.4",
     "@loopback/rest-explorer": "^1.2.6",
     "@loopback/service-proxy": "^1.2.6",
-    "loopback-connector-rest": "^3.4.2"
+    "loopback-connector-rest": "^3.4.2",
+    "oasgraph-cli": "^0.4.3"
   },
   "devDependencies": {
     "@loopback/build": "^2.0.4",

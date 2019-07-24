@@ -10,6 +10,6 @@ export class TodoService {
   constructor(private http: HttpClient) {}
 
   getTodos(): Observable<Todo[]> {
-    return this.http.get<Todo[]>('http://localhost:3000/todos');
+    return this.http.get<Todo[]>('/todos');
   }
 }
