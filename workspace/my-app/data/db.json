@@ -1,0 +1,13 @@
+{
+  "ids": {
+    "Hero": 6
+  },
+  "models": {
+    "Hero": {
+      "2": "{\"name\":\"Captain America\",\"id\":2}",
+      "3": "{\"name\":\"Thor\",\"id\":3}",
+      "4": "{\"name\":\"Hawkeye\",\"id\":4}",
+      "5": "{\"name\":\"Thanos\",\"id\":5}"
+    }
+  }
+}
